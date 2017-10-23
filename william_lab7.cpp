@@ -78,3 +78,36 @@ void rtl_recure(Node* root, queue<Node*> path){
     rtl_recure(root->right, path);
   }
 }
+
+
+void all_root_to_leaves(Node* root){
+  queue<Node*> path;
+  rtl_recure(root, path);
+}
+
+//This is extra credit. Only turn it in after completing other questions
+void sumPath(Node* root, int k){
+
+}
+
+int main(){
+    struct Node *root = newNode(1);
+    root->left = newNode(2);
+    root->right = newNode(3);
+    root->left->left = newNode(4);
+    root->left->right = newNode(5);
+    root->right->left = newNode(6);
+    root->right->right = newNode(7);
+// The calls for the above incomplete functions commented out purposefully. Please uncomment after you have completed all the above methods.
+    cout << "Inorder Traversal" << endl;
+    inorder(root);
+    cout << "Preorder Traversal" << endl;
+    preorder(root);
+    cout << "Postorder Traversal" << endl;
+    postorder(root);
+    cout << "Breadth First Traversal" << endl;
+    BFS_tree(root);
+    cout << "All Root to Leaves" << endl;
+    all_root_to_leaves(root);
+//    sumPath(root, 11);
+}
